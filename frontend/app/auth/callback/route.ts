@@ -7,7 +7,7 @@ export async function GET(request: Request) {
   // https://supabase.com/docs/guides/auth/server-side/nextjs
   const requestUrl = new URL(request.url);
   const code = requestUrl.searchParams.get("code");
-  const origin = "https://metaspacefrontend-fateh02s-projects.vercel.app";
+  const origin =  process.env.NEXT_PUBLIC_SITE_URL ;
 
   if (code) {
     const supabase = createClient();
