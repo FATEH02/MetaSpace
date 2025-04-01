@@ -13,6 +13,7 @@ export async function GET(request: Request) {
     const supabase = createClient();
     await supabase.auth.exchangeCodeForSession(code);
   }
+  // added new comment
 
   // URL to redirect to after sign up process completes
   return NextResponse.redirect(`${origin}/app`);
